@@ -1,11 +1,9 @@
-export const dynamic = 'force-static';
-
-function fetchSomeData(): string {
+async function fetchSomeData(): Promise<string> {
   return 'Server-rendered demo payload for observing RSC serialization.';
 }
 
-export default function Home() {
-  const data = fetchSomeData();
+export default async function Home() {
+  const data = await fetchSomeData();
 
   return (
     <div>
@@ -14,8 +12,8 @@ export default function Home() {
         behavior prior to recent security patches.
       </p>
       <p>
-        The server component below uses mock data so you can inspect how the App Router
-        serializes responses and hydrates client navigation without runtime drift.
+        The async server component below fetches mock data so you can inspect how the App
+        Router serializes responses and hydrates client navigation.
       </p>
       <p className="code">{data}</p>
     </div>

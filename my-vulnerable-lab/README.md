@@ -14,7 +14,7 @@ This lab scaffolds a deliberately vulnerable Next.js application for testing Rea
    ```
 3. Visit [http://localhost:3000](http://localhost:3000) to exercise the server component and API route.
 
-The `app/page.tsx` file renders server-provided mock data with `export const dynamic = 'force-static'` so hydration stays deterministic, while `app/api/actions/route.ts` exposes a simple POST endpoint for observing server action serialization.
+The `app/page.tsx` file is an async server component that fetches mock data, while `app/api/actions/route.ts` exposes a simple POST endpoint for observing server action serialization.
 
 ## Docker Usage
 
