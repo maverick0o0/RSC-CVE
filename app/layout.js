@@ -1,8 +1,9 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'CVE Demo | CVE-2025-55182 & CVE-2025-66478',
-  description: 'Lightweight Next.js showcase describing two imaginary CVE scenarios.',
+  title: 'CVE-2025-55182 insecure deserialization lab',
+  description:
+    'Intentionally vulnerable Next.js 15 / React 19 demo highlighting insecure deserialization in React Server Components.',
 };
 
 export default function RootLayout({ children }) {
